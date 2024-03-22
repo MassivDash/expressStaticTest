@@ -1,11 +1,11 @@
-const express = require('express');
+const restify = require("restify");
 
-const app = express();
+var server = restify.createServer();
+server.get(
+  "*",
+  restify.plugins.serveStaticFiles(
+    "./static",
+  ),
+);
 
-app.use(
-    express.static("./static"),
-  );
-
-app.listen(3000, function () {
-    console.log('App listening on port 3000!');
-});
+server.listen(3000);

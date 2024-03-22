@@ -4,11 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "loadTest": "loadtest -n 1000 -c 100 https://nginxtest.spaceout.pl/",
+    "loadTest2": "loadtest -n 1000 -c 100 https://expresstest.spaceout.pl/",
+    "loadTest3": "loadtest -n 1000 -c 100 https://astrox.spaceout.pl/rustTest",
+    "loadTest4": "loadtest -n 1000 -c 100 http://s3-statictest.s3-website.eu-central-1.amazonaws.com/"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.1"
+    "restify": "^11.1.0"
+  },
+  "devDependencies": {
+    "loadtest": "^8.0.9"
   }
 }
